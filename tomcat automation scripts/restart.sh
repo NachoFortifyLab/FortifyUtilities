@@ -19,27 +19,42 @@
 # Restart Script for the CATALINA Server
 # -----------------------------------------------------------------------------
 
-# Stops Tomcat
-echo "Stopping Tomcat..."
+# Variables #
 
-sleep 5
+Tomcat_Status=$(sh /opt/apache-tomcat-9.0.86/bin/shutdown.sh | tail -n 1) 
 
-echo ""
+# Checks if the tomcat is running
+if echo "$Tomcat_Status" | grep -q "Is Tomcat running? Stop aborted"; then
+  # If tomcat is not running it will not restart
 
-$CATALINA_HOME/bin/shutdown.sh
+  echo "Tomcat is not running"
+   
+  echo "Tomcat cannot be restarted"
+else
+  # If tomcat is running it will restart it
 
-echo ""
+  # Stops Tomcat
+  echo "Stopping Tomcat..."
 
-# Starts Tomcat
-echo "Starting Tomcat..."
+  sleep 5
 
-sleep 5
+  echo ""
 
-echo ""
+  $CATALINA_HOME/bin/shutdown.sh
+
+  echo ""
+
+  # Starts Tomcat
+  echo "Starting Tomcat..."
+
+  sleep 5
+
+  echo ""
     
-$CATALINA_HOME/bin/startup.sh
+  $CATALINA_HOME/bin/startup.sh
 
-echo ""
+  echo ""
 
-echo "Tomcat restarted successfully."
+  echo "Tomcat restarted successfully."  
+fi
 
