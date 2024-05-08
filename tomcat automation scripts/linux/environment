@@ -1,0 +1,6 @@
+JAVA_HOME="/usr/lib/jvm/jdk-17-oracle-x64"
+CATALINA_HOME="/opt/apache-tomcat-9.0.86"
+CATALINA_BASE="/opt/apache-tomcat-9.0.86"
+CATALINA_PID="/opt/apache-tomcat-9.0.86/temp/tomcat.pid"
+
+
