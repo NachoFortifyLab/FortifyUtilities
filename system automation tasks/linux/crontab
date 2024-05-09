@@ -13,4 +13,5 @@ MAILTO=root
 # |  |  |  |  |
 # *  *  *  *  * user-name  command to be executed
 
-@reboot /opt/apache-tomcat-9.0.86/bin/startup
+# Starts Tomcat on system start
+@reboot pathtoyourtomcatfolder/bin/startup.sh
