@@ -13,5 +13,5 @@ MAILTO=root
 # |  |  |  |  |
 # *  *  *  *  * user-name  command to be executed
 
-# Starts Tomcat on system start
+# Starts Tomcat on system start/reboot
 @reboot pathtoyourtomcatfolder/bin/startup.sh
