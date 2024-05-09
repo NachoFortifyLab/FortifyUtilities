@@ -7,11 +7,11 @@ User=root
 Restart=on-failure
 Type=forking
 
-Environment=CATALINA_PID=/opt/apache-tomcat-9.0.86/temp/tomcat.pid
-Environment=CATALINA_HOME=/opt//opt/apache-tomcat-9.0.86
-Environment=CATALINA_BASE=/opt/apache-tomcat-9.0.86
-ExecStart=/opt/apache-tomcat-9.0.86/bin/startup.sh
-ExecStop=/opt/apache-tomcat-9.0.86/bin/shutdown.sh
+Environment=CATALINA_PID=pathtotomcatonlinux/temp/tomcat.pid
+Environment=CATALINA_HOME=pathtotomcatonlinux
+Environment=CATALINA_BASE=pathtotomcatonlinux
+ExecStart=pathtotomcatonlinux/bin/startup.sh
+ExecStop=pathtotomcatonlinux/bin/shutdown.sh
 
 [Install]
 WantedBy=multi-user.target
