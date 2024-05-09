@@ -13,5 +13,8 @@ MAILTO=root
 # |  |  |  |  |
 # *  *  *  *  * user-name  command to be executed
 
-# Starts Tomcat on system start/reboot
+# Starts Tomcat on system reboot/startup
 @reboot pathtoyourtomcatfolder/bin/startup.sh
+
+# Starts a docker container on reboot/startup
+@reboot pathtoyourdockerscript/yourscript.sh
